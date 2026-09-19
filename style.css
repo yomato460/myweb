@@ -1,0 +1,1068 @@
+```css
+/* =========================
+   基础设置
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Microsoft YaHei",
+        sans-serif;
+
+    background: #080b14;
+    color: #f5f7ff;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================
+   导航栏
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(8, 11, 20, 0.65);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #7c5cff;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #aeb4c7;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+    color: white;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(92, 73, 255, 0.20),
+            transparent 35%
+        ),
+        #080b14;
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border-radius: 50%;
+
+    background: rgba(75, 60, 255, 0.12);
+
+    filter: blur(100px);
+
+    top: 15%;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 120px 20px 60px;
+}
+
+
+/* =========================
+   Avatar
+========================= */
+
+.avatar-wrapper {
+    width: 125px;
+    height: 125px;
+
+    margin: 0 auto 28px;
+
+    position: relative;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 0 50px rgba(102, 82, 255, 0.45);
+
+    background: #151a2b;
+}
+
+.online-dot {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    background: #42e8a3;
+
+    border-radius: 50%;
+
+    right: 5px;
+    bottom: 8px;
+
+    border: 3px solid #080b14;
+}
+
+
+/* =========================
+   Hero文字
+========================= */
+
+.hello {
+    color: #8d7cff;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 82px);
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    background:
+        linear-gradient(
+            90deg,
+            #8c73ff,
+            #5fc8ff
+        );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-description {
+    color: #9fa6bb;
+
+    font-size: 17px;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.hero-description strong {
+    color: #dfe3f3;
+}
+
+
+/* =========================
+   按钮
+========================= */
+
+.hero-buttons {
+    margin-top: 38px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.btn {
+    padding: 14px 25px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: linear-gradient(
+        135deg,
+        #725cff,
+        #4b9fff
+    );
+
+    box-shadow:
+        0 10px 30px rgba(85, 91, 255, 0.25);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 40px rgba(85, 91, 255, 0.4);
+}
+
+.secondary-btn {
+    border: 1px solid rgba(255,255,255,0.12);
+
+    color: #c6cada;
+}
+
+.secondary-btn:hover {
+    background: rgba(255,255,255,0.06);
+}
+
+
+/* =========================
+   Scroll
+========================= */
+
+.scroll-down {
+    margin-top: 70px;
+
+    color: #626a80;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* =========================
+   Section
+========================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 120px 25px;
+}
+
+.dark-section {
+    max-width: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0b0f1b,
+            #080b14
+        );
+}
+
+
+/* =========================
+   标题
+========================= */
+
+.section-title {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 60px;
+}
+
+.section-title > span {
+    color: #7563ff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    padding-top: 7px;
+}
+
+.section-title p {
+    color: #71798e;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 5px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+}
+
+
+/* =========================
+   关于我
+========================= */
+
+.about-container {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-text {
+    color: #9299ad;
+
+    font-size: 16px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-text .big-text {
+    color: white;
+
+    font-size: 27px;
+
+    font-weight: 700;
+}
+
+.about-text .big-text span {
+    color: #7d69ff;
+}
+
+
+/* =========================
+   代码卡片
+========================= */
+
+.about-card {
+    padding: 35px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(18, 23, 38, 0.8);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.3);
+
+    font-family: monospace;
+
+    font-size: 14px;
+
+    color: #c4cadb;
+}
+
+.code-line {
+    margin: 8px 0;
+}
+
+.indent {
+    padding-left: 25px;
+}
+
+.code-purple {
+    color: #b58cff;
+}
+
+.code-blue {
+    color: #63a8ff;
+}
+
+.code-yellow {
+    color: #ffd166;
+}
+
+.code-green {
+    color: #61d9a5;
+}
+
+
+/* =========================
+   技能
+========================= */
+
+.skills-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.skill-card {
+    padding: 35px;
+
+    min-height: 300px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(17, 22, 36, 0.8);
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    transition: 0.35s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    background: rgba(105, 86, 255, 0.12);
+
+    border-radius: 50%;
+
+    filter: blur(50px);
+
+    top: -50px;
+    right: -50px;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(120,100,255,0.35);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.3);
+}
+
+.skill-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        rgba(115, 92, 255, 0.12);
+
+    color: #8876ff;
+
+    font-size: 23px;
+
+    margin-bottom: 25px;
+}
+
+.skill-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 13px;
+}
+
+.skill-card p {
+    color: #858ca1;
+
+    font-size: 14px;
+}
+
+.skill-tags {
+    margin-top: 25px;
+
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.skill-tags span,
+.project-tags span {
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    background: rgba(255,255,255,0.05);
+
+    color: #9098ac;
+
+    font-size: 11px;
+}
+
+.future-card {
+    border-style: dashed;
+}
+
+.future-line {
+    margin-top: 25px;
+
+    color: #6f778c;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   项目
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.project-card {
+    min-height: 440px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #121827,
+            #0d111d
+        );
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    transition: 0.35s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(120,100,255,0.4);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.35);
+}
+
+.project-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 28px 28px 0;
+}
+
+.project-number {
+    color: #4f576b;
+
+    font-size: 12px;
+
+    font-family: monospace;
+}
+
+.project-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #8d7cff;
+
+    background:
+        rgba(113, 91, 255, 0.1);
+}
+
+.project-content {
+    padding: 25px 28px;
+}
+
+.project-type {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #7565e8;
+}
+
+.project-content h3 {
+    margin-top: 9px;
+
+    font-size: 21px;
+}
+
+.project-content p {
+    margin-top: 15px;
+
+    color: #858da2;
+
+    font-size: 14px;
+}
+
+.project-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 20px;
+}
+
+.project-footer {
+    padding: 20px 28px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.06);
+}
+
+.project-btn {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #a89cff;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    color: white;
+
+    padding-left: 5px;
+}
+
+.coming-soon {
+    color: #626b80;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.future-project {
+    border-style: dashed;
+}
+
+
+/* =========================
+   联系
+========================= */
+
+.contact-section {
+    padding: 150px 25px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(84, 69, 255, 0.15),
+            transparent 45%
+        ),
+        #090c15;
+}
+
+.contact-content {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.contact-label {
+    color: #8170ff;
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+}
+
+.contact-section h2 {
+    font-size: clamp(38px, 6vw, 60px);
+
+    line-height: 1.2;
+
+    margin: 20px 0;
+}
+
+.contact-section h2 span {
+    background:
+        linear-gradient(
+            90deg,
+            #816eff,
+            #5dc9ff
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+.contact-section p {
+    color: #838b9f;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+.email-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+    padding: 16px 25px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    color: #dfe3ef;
+
+    transition: 0.3s;
+}
+
+.email-button:hover {
+    background:
+        rgba(115,92,255,0.15);
+
+    border-color:
+        rgba(115,92,255,0.4);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    border-top:
+        1px solid rgba(255,255,255,0.06);
+
+    background: #070910;
+}
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 30px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+.footer-container p {
+    color: #555d70;
+
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 20px;
+
+    color: #697185;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   返回顶部
+========================= */
+
+.back-top {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    background: rgba(20,25,40,0.85);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.3s;
+
+    z-index: 100;
+}
+
+.back-top.show {
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+/* =========================
+   动画
+========================= */
+
+.skill-card,
+.project-card,
+.about-container {
+    animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   手机端
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        position: absolute;
+
+        top: 76px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        background: rgba(8,11,20,0.96);
+
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 90px 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .btn {
+        width: 220px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .contact-section {
+        padding: 110px 20px;
+    }
+
+    .email-button {
+        font-size: 13px;
+    }
+
+}
+```
